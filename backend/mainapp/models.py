@@ -33,3 +33,4 @@ class Announcement(models.Model):
   description = models.TextField()
   media_files = generic.GenericRelation(MediaFile)
   related_members = models.ManyToManyField(User)
+  media_files = generic.GenericRelation(MediaFile)
