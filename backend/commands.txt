@@ -1,0 +1,52 @@
+    1  sudo yum install httpd
+    2  sudo yum install mysql-server
+    3  sudo service httpd start
+    4  ifconfig eth0 | grep inet | awk '{ print $2 }'
+    5  sudo service mysqld start
+    6  sudo /usr/bin/mysql_se
+    7  sudo /usr/bin/mysql_secure_installation 
+    8  hostname
+    9  rpm -Uvh http://download.fedora.redhat.com/pub/epel/5/i386/epel-release-5-4.noarch.rpm
+   10  yum install django
+   11  yum install MySQL-python
+   12  yum install django
+   13  mkdir downloads
+   14  pip install django=1.6
+   15  yum install pip
+   16  yum -y install python-pip
+   17  cd /tmp
+   18  wget http://mirror-fpt-telecom.fpt.net/fedora/epel/6/i386/epel-release-6-8.noarch.rpm
+   19  wget
+   20  yum install wget
+   21  wget http://mirror-fpt-telecom.fpt.net/fedora/epel/6/i386/epel-release-6-8.noarch.rpm
+   22  rpm -ivh epel-release-6-8.noarch.rpm
+   23  yum install epel-release-6-8.noarch.rpm
+   24  yum repolist
+   25  yum -y install python-pip
+   26  pip install Django=1.6
+   27  pip install Django=1.6.2
+   28  pip install Django==1.6.2
+   29  yum search nginx
+   30  yum --disablerepo="*" --enablerepo="epel" install nginx
+   31  rpm -Uvh http://download.fedora.redhat.com/pub/epel/5/i386/epel-release-5-4.noarch.rpm
+   32  um update
+   33  yum install python-setuptools httpd mod_wsgi
+   34  cd ~
+   35  git clone https://github.com/AhmedFat7y/MedicalRobots medicalrobots
+   36  yum install git
+   37  git clone https://github.com/AhmedFat7y/MedicalRobots medicalrobots
+   38  ls medicalrobots/
+   39  ls medicalrobots/backend/
+   40  ls medicalrobots/backend/medicalrobots/
+   41  vim medicalrobots/backend/medicalrobots/wsgi.py 
+   42  yum install vim
+   43  vim medicalrobots/backend/medicalrobots/wsgi.py 
+   44  locate
+   45  find
+   46  find httpd-vhosts.conf
+   47  cd /
+   48  find httpd-vhosts.conf
+   49  history
+   50  cd ~
+   51  cat history > commands.txt
+   52  history > commands.txt
