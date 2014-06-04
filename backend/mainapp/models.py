@@ -16,7 +16,7 @@ class ExtraUserInfo(models.Model):
   brief = models.TextField()
   media_files = generic.GenericRelation(MediaFile)
 
-class Equipement(models.Model):
+class Equipment(models.Model):
   name = models.CharField(max_length=500)
   description = models.TextField()
   media_files = generic.GenericRelation(MediaFile)

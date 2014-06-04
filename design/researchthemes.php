@@ -80,19 +80,19 @@ $pagesCount = 4;
         <hr class="featurette-divider">
       <?php }?>
       <div class="row">
-      <div class="col-md-4"></div>
-      <div class="pagination col-md-4">
-        <ul class="pagination">
-          <li class="disabled"><a href="researchthemes.php">&laquo;</a></li>
-          <?php
-            for($i = 1; $i <= $pagesCount; $i++)
-              echo '<li class="'.($pageNumber==$i?'active':'').'"><a href="researchthemes.php">'.$i.'</a></li>';
-            ?>
-          <li class="<?php echo $pageNumber==$pagesCount||$pagesCount==0?'disabled':'';?>"><a href="researchthemes.php">&raquo;</a></li>
-        </ul>
+        <div class="col-md-4"></div>
+        <div class="pagination col-md-4">
+          <ul class="pagination">
+            <li class="disabled"><a href="researchthemes.php">&laquo;</a></li>
+            <?php
+              for($i = 1; $i <= $pagesCount; $i++)
+                echo '<li class="'.($pageNumber==$i?'active':'').'"><a href="researchthemes.php">'.$i.'</a></li>';
+              ?>
+            <li class="<?php echo $pageNumber==$pagesCount||$pagesCount==0?'disabled':'';?>"><a href="researchthemes.php">&raquo;</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4"></div>
       </div>
-      <div class="col-md-4"></div>
-    </div>
     </div> <!-- /container -->
     
     <!-- Site footer -->

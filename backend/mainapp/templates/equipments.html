@@ -1,0 +1,25 @@
+{% extends "master.html" %}
+{% block title %}Equipment{% endblock %}
+{% block content %}
+  {% for equipment in items_list %}
+  <div class="row item">
+    <div class="col-md-2">
+      <a href="{% url 'equipment_url' equipment.id %}">
+        <img class="small" src="{% with equipment.media_files|first as media_file %}{{ media_file.url }}{% endwith %}"/>
+      </a>
+    </div>
+    <div class="col-md-9">
+      <h3>
+        <a href="{% url 'equipment_url' equipment.id %}">{{equipment.name}}</a>
+      </h3>
+      <p>
+        {{equipment.description}}
+      </p>
+    </div>
+  </div>
+  <hr class="featurette-divider">
+  {% empty %}
+    <div class="row item">Sorry, No quipments for now.</div>
+  {% endfor %}
+  {% include "tags/paginator.html" %}
+{% endblock %}

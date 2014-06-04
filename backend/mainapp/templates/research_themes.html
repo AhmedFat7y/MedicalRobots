@@ -1,0 +1,26 @@
+{% extends "master.html" %}
+{% block title %}Research Themes{% endblock %}
+{% block content %}
+  {% for research in items_list %}
+  <div class="row item">
+    <div class="col-md-2">
+      <a href="{% url 'research_theme_url' research.id %}">
+        <img class="small" src="{% with research.media_files|first as media_file %}{{ media_file.url }}{% endwith %}"/>
+      </a>
+    </div>
+    <div class="col-md-9">
+      <h3>
+        <a href="{% url 'research_theme_url' research.id %}">{{research.title}}</a>
+      </h3>
+      <p>
+        {{research.description}}
+      </p>
+      <p>Supervised By: <a href="{% url 'user_profile_url' research.supervisor.id %}">{{research.supervisor.user.username}}</a></p>
+    </div>
+  </div>
+  <hr class="featurette-divider">
+  {% empty %}
+    <div class="row item">Sorry, No research themes for now.</div>
+  {% endfor %}
+  {% include "tags/paginator.html" %}
+{% endblock %}

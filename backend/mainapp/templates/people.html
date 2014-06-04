@@ -1,0 +1,25 @@
+{% extends "master.html" %}
+{% block title %}People{% endblock %}
+{% block content %}
+  {% for user_profile in items_list %}
+  <div class="row item">
+    <div class="col-md-2">
+      <a href="{% url 'user_profile_url' user_profile.id %}">
+        <img class="small" src="{% with user_profile.media_files|first as media_file %}{{ media_file.url }}{% endwith %}"/>
+      </a>
+    </div>
+    <div class="col-md-9">
+      <h3>
+        <a href="{% url 'user_profile_url' user_profile.id %}">{{user_profile.user.username}}</a>
+      </h3>
+      <p>
+        {{user_profile.brief}}
+      </p>
+    </div>
+  </div>
+  <hr class="featurette-divider">
+  {% empty %}
+    <div class="row item">Sorry, No people for now.</div>
+  {% endfor %}
+  {% include "tags/paginator.html" %}
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "master.html" %}
+{% block title %}Research Themes{% endblock %}
+{% block content %}
+<!-- Jumbotron -->
+<div class="jumbotron" style="background-color: #eee;">
+  <h1>Some cool title!</h1>
+  <p class="lead">Some cool announcement or brief description. Whatever suits you. We can remove the below link. </p>
+  <p><a class="btn btn-lg btn-success" href="{% url 'contact_url' %}" role="button">Join us</a></p>
+</div>
+
+<!-- Example row of columns -->
+<div class="row">
+  <div class="col-lg-4">
+    <h2>Cool Announcement!</h2>
+    <p>some announcement, event, or even a brief description on a famous research topic. We can have multiple lines but not too much</p>
+    <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+  </div>
+  <div class="col-lg-4">
+    <h2>Cool Announcement!</h2>
+    <p>some announcement, event, or even a brief description on a famous research topic. We can have multiple lines but not too much</p>
+    <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+  </div>
+  <div class="col-lg-4">
+    <h2>Cool Announcement!</h2>
+    <p>some announcement, event, or even a brief description on a famous research topic. We can have multiple lines but not too much</p>
+    <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+  </div>
+</div>
+{% endblock %}

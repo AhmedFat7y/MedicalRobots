@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="pagination col-md-4">
+    <ul class="pagination">
+      {% if items_list.has_previous %}
+        <li><a href="?page={{items_list.previous_page_number}}">&laquo;</a></li>
+      {% else %}
+        <li class="disabled"><a href="#">&laquo;</a></li>
+      {% endif %}
+      {% for index in num_pages %}
+        {% if index == items_list.number %}
+          <li class="active"><a href="?page={{index}}">{{index}}</a></li>
+        {% else %}
+        <li><a href="?page={{index}}">{{index}}</a></li>
+        {% endif %}
+      {% endfor %}
+      {% if items_list.has_next %}
+        <li><a href="?page={{items_list.next_page_number}}">&laquo;</a></li>
+      {% else %}
+        <li class="disabled"><a href="#">&laquo;</a></li>
+      {% endif %}
+    </ul>
+  </div>
+  <div class="col-md-4"></div>
+</div>
